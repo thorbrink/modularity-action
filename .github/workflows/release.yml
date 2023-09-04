@@ -4,10 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
-    - uses: helsingborg-stad/municipio-deploy/release-wp-plugin@feat/release-action
+    - name: Create Release and bump version files
+      uses: helsingborg-stad/municipio-deploy/release-wp-plugin@feat/release-action
